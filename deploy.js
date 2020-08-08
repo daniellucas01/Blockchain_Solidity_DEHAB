@@ -1,6 +1,6 @@
 const TruffleProvider = require ('truffle-hdwallet-provider');
 const Web3 = require('web3');
-const {interface , bytecode } = require('./compile');
+const {interface , bytecode} = require('./compile');
 
 const provider = new TruffleProvider(
     'wrestle celery slender fine fetch eagle bring trust country charge time list', 
@@ -19,4 +19,7 @@ const deploy = async () => {
 
         console.log('Contract deployed to', result.options.address);
 };
+
 deploy();
+
+module.exports = deploy();
